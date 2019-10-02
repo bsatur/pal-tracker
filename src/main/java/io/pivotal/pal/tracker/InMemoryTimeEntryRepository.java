@@ -3,6 +3,7 @@ package io.pivotal.pal.tracker;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class InMemoryTimeEntryRepository implements TimeEntryRepository{
 
     private List<TimeEntry> timeEntryList;
@@ -11,13 +12,14 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
 
     public InMemoryTimeEntryRepository(){
         this.newID = 1L;
+        this.timeEntryList = new ArrayList<TimeEntry>();
+
+
     }
 
     @Override
     public TimeEntry create(TimeEntry newTimeEntry) {
-        if (null == timeEntryList) {
-            timeEntryList = new ArrayList<TimeEntry>();
-        }
+
 
         if (newTimeEntry.getId() == 0) {
             newTimeEntry.setId(newID);

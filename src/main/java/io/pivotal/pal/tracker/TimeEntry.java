@@ -40,6 +40,22 @@ public class TimeEntry {
         return  this.id;
     }
 
+    public long getProjectId() {
+        return projectId;
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
     public void setId(Long id){
         this.id = id;
     }
@@ -61,15 +77,5 @@ public class TimeEntry {
         return Objects.hash(id, projectId, userId, date, hours);
     }
 
-    @Override
-    public String toString() {
-        return "TimeEntry{" +
-                "id=" + id +
-                ", projectId=" + projectId +
-                ", userId=" + userId +
-                ", date=" + date +
-                ", hours=" + hours +
-                '}';
-    }
 }
 
