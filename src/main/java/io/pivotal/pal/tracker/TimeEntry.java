@@ -77,5 +77,6 @@ public class TimeEntry {
         return Objects.hash(id, projectId, userId, date, hours);
     }
 
+
 }
 
